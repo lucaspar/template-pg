@@ -97,21 +97,21 @@ Versao: \currversion^^J
   \def\tccspecificinfo{%
     Trabalho acad{\^e}mico apresentado ao Curso de \@course\ da
     \furg, como requisito parcial para a obten{\c{c}}{\~a}o do grau de
-    \@graduacao%
+    \@graduacao .%
   }%
   % Trabalho Individual %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \def\tiname{Trabalho Individual (Mestrado) -- \@course}%
   \def\tispecificinfo{%
     Trabalho Individual apresentado ao \@course\ da \furg, como
     requisito parcial para a obten{\c{c}}{\~a}o do grau de Mestre em
-    \@mestrado%
+    \@mestrado .%
   }%
   % Disserta��o de Mestrado %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \def\dmname{Disserta{\c{c}}{\~a}o (Mestrado) -- \@course}%
   \def\dmspecificinfo{%
     Disserta{\c{c}}{\~a}o de Mestrado apresentada ao \@course\ da
     \furg, como requisito parcial para a obten{\c{c}}{\~a}o do grau de
-    Mestre em \@mestrado%
+    Mestre em \@mestrado .%
   }%
 }
 

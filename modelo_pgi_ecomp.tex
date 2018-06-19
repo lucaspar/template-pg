@@ -1,8 +1,9 @@
-\documentclass[tcc,ec]{texfurg} %ppgcomp ou ppgmc
+\documentclass[tcc,ec]{texfurg} % EC / EA / SI | PPGComp / PPGMC
 
-\usepackage[utf8]{inputenc}   % pacote para acentuação, o latin nao funciona.
-\usepackage{graphicx} % para inserir figuras
-\usepackage{multirow} % tabela"
+\usepackage[utf8]{inputenc}     % para acentuação
+\usepackage{graphicx}           % para figuras
+\usepackage{multirow}           % para tabelas
+\usepackage{lipsum}             % lorem ipsum
 
 \title{Modelo TCC para Engenharia de Computação}
 
@@ -16,16 +17,21 @@
 \examiner{Prof.~MSc.~Gerúndio das Dores}
 
 
-\keyword{Palavra um}
-\keyword{Palavra dois}
-\keyword{Palavra três}
-\keyword{Palavra quatro}
+\keyword{palavra um}
+\keyword{palavra dois}
+\keyword{palavra três}
+\keyword{palavra quatro}
 % Até 10 palavras chaves
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-%\renewcommand{\advisorname}{Orientadora}           %descomente caso tenhas orientadora
-%\renewcommand{\coadvisorname}{Co-orientadora}      %descomente caso tenhas co-orientadora
+%\renewcommand{\advisorname}{Orientadora}           % descomente caso tenhas orientadora
+%\renewcommand{\coadvisorname}{Co-orientadora}      % descomente caso tenhas co-orientadora
 
 \maketitle
 
@@ -36,9 +42,12 @@
      Resumo em Português.
 \end{abstract}
 
-\begin{englishabstract}%
-  Abstract. In English.
+% Resumo em Inglês
+\begin{englishabstract}{English Title}{english, keywords, comma, separated}
+    Abstract in English.
 \end{englishabstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Lista de Figuras
 \listoffigures
@@ -48,128 +57,100 @@
 
 %lista de abreviaturas e siglas
 \begin{listofabbrv}{SPMD}
-		\item[ABC] \textit{Abcd Bcde Cdef}
-		\item[XYZ] \textit{Xbcd Ycde Zdef}
-       \end{listofabbrv}
+    \item[ABC] \textit{Abcd Bcde Cdef}
+    \item[XYZ] \textit{Xbcd Ycde Zdef}
+\end{listofabbrv}
 
 %Sumario
 \tableofcontents
 
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Capítulo Um}
 
-Capítulos podem ter seções e subseções.
+\lipsum[18]
 
-%Ex.: Opcional
-\section{Seção Um} 
+% Ex.: Opcional
+\section{Seção Um}
 
-Seção Opcional.
+\lipsum[1]
 
 \subsection{Subseção}
 
-Subseção Opcional.
+\lipsum[2]
+
+\subsubsection{Sub-subseção}
+
+\lipsum[15]
+
+\paragraph{Parágrafo}
+
+\lipsum[17]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Capítulo Dois}
 
-Conceitos e trabalhos que estão relacionados ao projeto.
+O trabalho de \citet{knuth:84} mostrou os fundamentos...
 
-Exemplos de citação. 
+\lipsum[3]
 
-Bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla
-\citep{knuth:84}.
+Em \citet{boulic:91} o tempo utilizado para o mesmo experimento foi na ordem de $10^6$ segundos.
 
-\citet{boulic:91} apresentou o conceito de bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla.
+\lipsum[6]
 
- Bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla
-\citep{knuth:84, smith:99}.
+Ambos \citep{knuth:84, smith:99} provaram que o protocolo é suscetível a diferentes ataques.
 
+\lipsum[7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Capítulo Três}
 
+Exemplo de figura. A figura~\ref{nome_figura} apresenta.
 
-Exemplo de figura. A figura~\ref{nome_figura} apresenta bla bla bla.
-
-      \begin{figure}[htbp]
+    \begin{figure}[htbp]
         \centering \includegraphics[scale=.3]{turing_machine.eps}
         \caption{Legenda de Figura}
         \label{nome_figura}
     \end{figure}
 
-\chapter{Capítulo Quatro}
+Exemplo de Tabela. Conforme tabela~\ref{tabela}...
 
-Exemplo de Tabela. Conforme tabela~\ref{tabela}, bla bla bla.
+    \begin{table}[htbp]
+        \begin{center}
+            \caption{Nome da Tabela}
+            \label{tabela}
+            \begin{tabular}{ccc}
+                \hline
+                Coluna A & Coluna B & Tempos \\
+                \hline
+                1       & 2     & 3     \\
+                4       & 5     & 6     \\
+                7       & 8     & 9     \\
+                10      & 11    & 12    \\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
 
-\begin{table}[htbp]
-\begin{center}
-\caption{Nome da Tabela}
-\label{tabela}
-\begin{tabular}{ccc}
-\hline
-Blabla & Blabla & Blablabla\\
-\hline
-1 & 2  & 3 \\
-4 & 5  & 6 \\
-7 & 8  & 9 \\
-10 & 11  & 12 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  REFERENZAS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\bibliography{bibliografia}
+\bibliography{mendeley_v2}
 \bibliographystyle{abnt}
 
 % Anexos (Opcional)
 \annex
-\chapter{Um Anexo}
+\chapter{Um exemplo de anexo}
 
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
+\lipsum[10-12]
 
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
+\chapter{Outro anexo exemplo}
 
-\chapter{Outro Anexo}
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
+\lipsum[13-14]
 
 \end{document}
